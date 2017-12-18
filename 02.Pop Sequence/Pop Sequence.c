@@ -20,7 +20,7 @@ int main() {
 }
 
 void check(int m, int n) {
-	int i, next = 0, temp;
+	int i, next = 0;
 	int list[MAX];
 	PtrStack s = (PtrStack)malloc(sizeof(struct Stack));
 	s->top = -1;
@@ -40,8 +40,7 @@ void check(int m, int n) {
 				return;
 			}
 		else {
-			temp = pop(s);
-			if (list[i] != temp) {
+			if (list[i] != pop(s)) {
 				printf("NO\n");
 				return;
 			}

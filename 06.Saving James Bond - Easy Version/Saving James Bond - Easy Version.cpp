@@ -20,7 +20,6 @@ void BFS(queue<int> &q, int N, vector<int> &visited, vector<p> &G, double D) {
 		cout << "Yes" << endl;
 		return; 
 	}
-	//cout << G[fp].x << " " << G[fp].y << endl;
 	q.pop();
 	visited[fp] = 0;
 	for (i=0;i<N;i++) {
@@ -43,14 +42,9 @@ int main() {
 	}
 	for (i=0;i<N;i++) {
 		cin >> G[i].x >> G[i].y;
-		//cout << G[i].x << G[i].y << endl;
 		if (distant((p){0, 0}, G[i]) <= 7.5 + D)
 			q.push(i);	
 	}
 	BFS(q, N, visited, G, D);
-	//for (i=0;i<q.size();i++) {
-	//	cout << q.front() << " " << G[q.front()].x << endl; 
-	//	q.pop();
-	//}
 	return 0;
 }

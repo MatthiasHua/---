@@ -62,6 +62,7 @@ PtrToNode NewNode(PtrToNode p) {
 
 List Merge(List L1, List L2) {
     List L = (List)malloc(sizeof(struct Node));
+    L->Next = NULL;
     PtrToNode p = L;
     while (L1->Next != NULL || L2->Next != NULL) {
         if (L1->Next != NULL && L2->Next != NULL) {
@@ -70,8 +71,8 @@ List Merge(List L1, List L2) {
                 p->Data = L2->Next->Data;
                 L2->Next = L2->Next->Next;
             }
-            else 
-                p->Data = L1->Next->Data; {
+            else {
+                p->Data = L1->Next->Data;
                 L1->Next = L1->Next->Next;
             }
         }

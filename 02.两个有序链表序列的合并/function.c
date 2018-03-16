@@ -1,5 +1,6 @@
 List Merge(List L1, List L2) {
     List L = (List)malloc(sizeof(struct Node));
+    L->Next = NULL;
     PtrToNode p = L;
     while (L1->Next != NULL || L2->Next != NULL) {
         if (L1->Next != NULL && L2->Next != NULL) {
